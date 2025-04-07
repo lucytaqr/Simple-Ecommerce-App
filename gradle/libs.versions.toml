@@ -19,6 +19,7 @@ espresso = "3.6.1"
 junit-ext = "1.2.1"
 core-testing = "2.2.0"
 ksp = "1.9.22-1.0.17"
+glide = "4.16.0"
 
 
 [libraries]
@@ -52,6 +53,9 @@ core-testing = { module = "androidx.arch.core:core-testing", version.ref = "core
 
 junit-ext = { module = "androidx.test.ext:junit", version.ref = "junit-ext" }
 espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
+
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-compiler = { module = "com.github.bumptech.glide:ksp", version.ref = "glide" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
