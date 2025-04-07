@@ -4,7 +4,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.lucy.simpleecommerceapp.data.api.ProductApiService
+import com.lucy.simpleecommerceapp.data.db.CartDao
+import com.lucy.simpleecommerceapp.data.db.CartItem
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -12,14 +13,18 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     @Inject
-    lateinit var api: ProductApiService
+    lateinit var cartDao: CartDao
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         lifecycleScope.launch {
-            val products = api.getAllProducts()
-            Log.d("API", products.toString())
+            cartDao.insertCartItem(
+                CartItem(productId = 1, name = "Test", price = 20.0, quantity = 2, image = "")
+            )
+            cartDao.getAllCartItems().collect {
+                Log.d("CART", it.toString())
+            }
         }
     }
 }
