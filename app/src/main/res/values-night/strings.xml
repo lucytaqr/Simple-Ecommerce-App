@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SimpleEcommerceApp</string>
     <string name="go_to_checkout">Go to Checkout</string>
     <string name="product_name">Product Name</string>
     <string name="checkout_now">Checkout Now</string>
