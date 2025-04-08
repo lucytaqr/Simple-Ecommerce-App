@@ -51,4 +51,10 @@ class ProductViewModel @Inject constructor(
             repository.addToCart(cartItem)
         }
     }
+
+    fun clearCart() {
+        viewModelScope.launch {
+            repository.clearCart()
+        }
+    }
 }

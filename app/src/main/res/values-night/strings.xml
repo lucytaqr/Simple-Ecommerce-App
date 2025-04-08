@@ -6,4 +6,6 @@
     <string name="rp_0">Rp 0</string>
     <string name="add_to_cart">Add to Cart</string>
     <string name="qty_1">Qty: 1</string>
+    <string name="total_0_00">Total: $0.00</string>
+    <string name="clear_cart">Clear Cart</string>
 </resources>
